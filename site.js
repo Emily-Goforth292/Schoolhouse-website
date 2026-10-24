@@ -42,7 +42,7 @@ document.getElementById('site-footer').innerHTML = `
   <footer class="site-footer">
     <div class="footer-inner">
       <span>A Little Schoolhouse Christian Learning Academy</span>
-      <span>11740 US Hwy 301 N, Parrish, FL · 941.776.1973 · ALittleSchoolhouseDirector@gmail.com · [License #]</span>
+      <span>11740 US Hwy 301 N, Parrish, FL · 941.776.1973 · ALittleSchoolhouseDirector@gmail.com · License # X12MA0026</span>
     </div>
   </footer>`;
 
