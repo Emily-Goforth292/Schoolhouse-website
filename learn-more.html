@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learn More | A Little Schoolhouse Christian Learning Academy</title>
+  <meta name="description" content="Contact A Little Schoolhouse Christian Learning Academy in Parrish, Florida to ask questions or schedule a tour.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="site.js" defer></script>
+</head>
+<body data-page="learn-more.html">
+
+  <div id="site-header"></div>
+
+  <main>
+    <section class="container page-hero even">
+      <div>
+        <div class="kicker">Learn more</div>
+        <h1>We would love to hear from you</h1>
+        <p>Have more questions? Want to schedule a tour? Fill out the form below, and one of our admission specialists will contact you.</p>
+      </div>
+      <img class="photo-round" style="aspect-ratio:16/10" src="images/school-front.jpg" alt="The front of A Little Schoolhouse Christian Learning Academy">
+    </section>
+
+    <section class="container contact-grid">
+      <!-- FORM SETUP LATER: create a free form at formspree.io, then replace YOUR_FORM_ID below with the ID it gives you -->
+      <form class="form-card" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div class="group-head" style="border:0;padding-bottom:0;margin:0;"><span class="dot dot-red"></span><h2 style="font-size:28px;">Send us a note</h2></div>
+        <label>Name *<input type="text" name="name" placeholder="Enter text here" required></label>
+        <label>Email *<input type="email" name="email" placeholder="Enter email address" required>
+          <span class="check"><input type="checkbox" name="email_updates" value="yes"> Check here to receive email updates</span>
+        </label>
+        <label>Subject *<input type="text" name="subject" placeholder="Enter text here" required></label>
+        <label>Message *<textarea name="message" placeholder="Enter your comment here" required></textarea></label>
+        <button type="submit" class="btn">Submit</button>
+      </form>
+
+      <div class="side-col">
+        <div class="info-card">
+          <h2>Map &amp; info</h2>
+        <div class="info-row"><span class="dot dot-red"></span><div><div class="il">Address</div><div class="iv">11740 US Hwy 301 N<br>Parrish, FL</div></div></div>
+        <div class="info-row"><span class="dot dot-blue"></span><div><div class="il">Phone</div><div class="iv"><a href="tel:+19417761973">(941) 776-1973</a></div></div></div>
+        <div class="info-row"><span class="dot dot-green"></span><div><div class="il">Email</div><div class="iv"><a href="mailto:ALittleSchoolhouseDirector@gmail.com">ALittleSchoolhouseDirector@gmail.com</a></div></div></div>
+        <div class="info-row"><span class="dot dot-yellow"></span><div><div class="il">Office hours</div><div class="iv">9:00am to 12:30pm Aug&ndash;May<br>Monday&ndash;Friday; or by appointment</div></div></div>
+        </div>
+        <div class="map">
+          <iframe title="Map to A Little Schoolhouse" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=11740+US+Hwy+301+N,+Parrish,+FL&amp;output=embed"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <div style="height:80px"></div>
+  </main>
+
+  <div id="site-footer"></div>
+
+</body>
+</html>
