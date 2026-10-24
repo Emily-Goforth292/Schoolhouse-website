@@ -345,7 +345,7 @@ h1, h2, h3, p { margin-top: 0; }
   display: flex; align-items: center; gap: 14px;
   padding-bottom: 18px; border-bottom: 1px solid var(--line); margin-bottom: 32px;
 }
-.group-head .dot { width: 18px; height: 18px; }
+.group-head .dot { width: 18px; height: 18px; flex: none; }
 .group-head h2 { font-weight: 800; font-size: 32px; letter-spacing: -0.02em; margin: 0; }
 
 .team { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 24px; }
@@ -360,4 +360,144 @@ h1, h2, h3, p { margin-top: 0; }
   .director h2 { font-size: 30px; }
   .team { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
   .group-head h2 { font-size: 26px; }
+}
+
+/* ---------- Testimonies page ---------- */
+.page-hero.single { grid-template-columns: 1fr; }
+.page-hero.single p { font-size: 19px; margin: 0; }
+
+.feature-quote {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: 48px;
+  align-items: center;
+  padding-top: 44px;
+}
+.feature-quote img { display: block; width: 100%; aspect-ratio: 1542 / 1905; object-fit: cover; border-radius: 32px; }
+.feature-quote .dots { display: flex; gap: 8px; margin-bottom: 24px; }
+.feature-quote .dots .dot { width: 14px; height: 14px; }
+.big-qmark { display: block; font-weight: 800; font-size: 96px; line-height: 0.6; height: 44px; }
+.feature-quote blockquote { margin: 0; font-size: 27px; line-height: 1.55; font-weight: 700; letter-spacing: -0.01em; }
+
+.quote-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.quote { margin: 0; border-radius: 28px; padding: 32px 34px; }
+.quote .qmark { display: block; font-weight: 800; font-size: 64px; line-height: 0.6; height: 30px; }
+.quote blockquote { margin: 0; font-size: 17px; line-height: 1.7; font-weight: 500; }
+.q-yellow { background: var(--yellow-pale); }
+.q-green { background: var(--green-pale); }
+.q-blue { background: var(--blue-pale); }
+.q-red { background: var(--red-pale); }
+
+.band.center { display: block; text-align: center; }
+.band.center h2 { margin-bottom: 8px; }
+.band.center p { margin: 0 0 24px; }
+
+@media (max-width: 960px) {
+  .feature-quote { grid-template-columns: 1fr; gap: 28px; padding-top: 28px; }
+  .feature-quote img { aspect-ratio: 4 / 3; }
+  .feature-quote blockquote { font-size: 21px; }
+  .quote-grid { grid-template-columns: 1fr; }
+  .band.center { padding: 32px 24px; }
+}
+
+/* ---------- Programs page ---------- */
+.page-hero.even { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 56px; }
+
+.program-list { display: flex; flex-direction: column; gap: 20px; }
+.program {
+  border: 1px solid var(--line);
+  border-radius: 32px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.6fr);
+}
+.program-side { padding: 36px; display: flex; flex-direction: column; gap: 18px; justify-content: center; }
+.program-side h2 { font-weight: 800; font-size: 30px; line-height: 1.12; letter-spacing: -0.02em; margin: 0; }
+.program-side .dot { width: 40px; height: 40px; }
+.bg-red { background: var(--red-pale); }
+.bg-yellow { background: var(--yellow-pale); }
+.bg-green { background: var(--green-pale); }
+.pills { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; }
+.pill { background: var(--white); padding: 8px 16px; border-radius: 999px; font-weight: 700; font-size: 15px; }
+.program-text { padding: 36px 40px; display: flex; align-items: center; }
+.program-text p { margin: 0; font-size: 17px; line-height: 1.75; font-weight: 500; }
+
+.video { border-radius: 32px; overflow: hidden; aspect-ratio: 16 / 9; }
+.video iframe { width: 100%; height: 100%; border: 0; display: block; }
+.video.placeholder { background: #F1F1F1; aspect-ratio: 16 / 7; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 17px; text-align: center; padding: 20px; }
+
+@media (max-width: 960px) {
+  .page-hero.even { grid-template-columns: 1fr; gap: 28px; }
+  .program { grid-template-columns: 1fr; }
+  .program-side { padding: 28px 24px; }
+  .program-side h2 { font-size: 26px; }
+  .program-text { padding: 24px; }
+  .video.placeholder { aspect-ratio: 16 / 9; }
+}
+
+/* ---------- Enrollment page ---------- */
+.pill-row { display: flex; gap: 12px; flex-wrap: wrap; }
+.pill-lg { padding: 12px 22px; border-radius: 999px; font-weight: 700; font-size: 17px; }
+.bg-blue { background: var(--blue-pale); }
+.pills .pill.bg-blue, .pills .pill.bg-green { background: var(--blue-pale); }
+.pills .pill.bg-green { background: var(--green-pale); }
+.pills { flex-direction: row; }
+
+.class-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; padding-top: 40px; }
+.class-link { border-radius: 32px; padding: 44px; display: flex; justify-content: space-between; align-items: center; gap: 20px; transition: transform .15s; }
+.class-link:hover { transform: translateY(-3px); }
+.class-link .kicker { margin-bottom: 10px; }
+.class-title { font-weight: 800; font-size: 34px; line-height: 1.1; letter-spacing: -0.02em; }
+.arrow { flex: none; width: 60px; height: 60px; border-radius: 50%; background: var(--white); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 28px; }
+.arrow.sm { width: 44px; height: 44px; font-size: 22px; }
+
+.info-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; padding-top: 20px; }
+.info-grid .card { padding: 36px; gap: 14px; border-radius: 28px; }
+.info-grid .card p { line-height: 1.7; margin: 0; }
+.info-grid .dot { width: 40px; height: 40px; flex: none; }
+.card-top { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.bw-logo { height: 36px; width: auto; display: block; }
+.btn-outline { align-self: flex-start; border: 2px solid var(--ink); padding: 12px 24px; border-radius: 999px; font-weight: 700; margin-top: 6px; }
+.btn-outline:hover { background: var(--yellow-pale); }
+
+.doc-links { display: flex; gap: 20px; flex-wrap: wrap; padding-top: 20px; }
+.doc-link { flex: 1; min-width: 260px; border-radius: 999px; padding: 22px 32px; display: flex; justify-content: space-between; align-items: center; gap: 16px; font-weight: 800; font-size: 20px; letter-spacing: -0.01em; }
+
+@media (max-width: 960px) {
+  .class-links, .info-grid { grid-template-columns: 1fr; }
+  .class-link { padding: 28px; }
+  .class-title { font-size: 26px; }
+  .arrow { width: 48px; height: 48px; font-size: 22px; }
+  .info-grid .card { padding: 28px; }
+  .pill-lg { font-size: 15px; padding: 10px 18px; }
+}
+
+/* ---------- Pricing page ---------- */
+.price-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; align-items: start; }
+.price-card { border-radius: 32px; padding: 36px 36px 24px; display: flex; flex-direction: column; }
+.price-title { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
+.price-title .dot { width: 24px; height: 24px; flex: none; }
+.price-title h3 { margin: 0; font-weight: 800; font-size: 28px; letter-spacing: -0.02em; }
+.price-note { font-size: 15px; line-height: 1.6; font-weight: 500; margin-bottom: 18px; }
+.price-row { display: flex; justify-content: space-between; align-items: baseline; gap: 20px; padding: 15px 0; border-top: 1px solid rgba(26, 26, 26, 0.15); }
+.price-row .plabel { font-weight: 700; font-size: 17px; }
+.price-row .sub { font-size: 14px; margin-top: 3px; font-weight: 500; }
+.price-row .pprice { font-weight: 800; font-size: 19px; text-align: right; }
+.price-foot { margin: 12px 0 8px; font-size: 14px; font-weight: 700; border-top: 1px solid rgba(26, 26, 26, 0.15); padding-top: 14px; }
+
+@media (max-width: 960px) {
+  .price-grid { grid-template-columns: 1fr; }
+  .price-card { padding: 28px 24px 16px; }
+  .price-title h3 { font-size: 24px; }
+  .price-row { gap: 12px; }
+  .price-row .plabel { font-size: 16px; }
+  .price-row .pprice { font-size: 17px; }
+}
+
+.page-hero.single .pill-lg { display: inline-block; }
+.price-row .pprice { white-space: nowrap; }
+@media (max-width: 960px) {
+  .page-hero.single .pill-lg { border-radius: 20px; }
+  .price-row .pprice { font-size: 16px; }
+  .price-row .plabel { font-size: 15px; }
 }
