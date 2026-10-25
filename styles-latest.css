@@ -345,7 +345,7 @@ h1, h2, h3, p { margin-top: 0; }
   display: flex; align-items: center; gap: 14px;
   padding-bottom: 18px; border-bottom: 1px solid var(--line); margin-bottom: 32px;
 }
-.group-head .dot { width: 18px; height: 18px; }
+.group-head .dot { width: 18px; height: 18px; flex: none; }
 .group-head h2 { font-weight: 800; font-size: 32px; letter-spacing: -0.02em; margin: 0; }
 
 .team { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 24px; }
@@ -398,4 +398,136 @@ h1, h2, h3, p { margin-top: 0; }
   .feature-quote blockquote { font-size: 21px; }
   .quote-grid { grid-template-columns: 1fr; }
   .band.center { padding: 32px 24px; }
+}
+
+/* ---------- Programs page ---------- */
+.page-hero.even { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 56px; }
+
+.program-list { display: flex; flex-direction: column; gap: 20px; }
+.program {
+  border: 1px solid var(--line);
+  border-radius: 32px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.6fr);
+}
+.program-side { padding: 36px; display: flex; flex-direction: column; gap: 18px; justify-content: center; }
+.program-side h2 { font-weight: 800; font-size: 30px; line-height: 1.12; letter-spacing: -0.02em; margin: 0; }
+.program-side .dot { width: 40px; height: 40px; }
+.bg-red { background: var(--red-pale); }
+.bg-yellow { background: var(--yellow-pale); }
+.bg-green { background: var(--green-pale); }
+.pills { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; }
+.pill { background: var(--white); padding: 8px 16px; border-radius: 999px; font-weight: 700; font-size: 15px; }
+.program-text { padding: 36px 40px; display: flex; align-items: center; }
+.program-text p { margin: 0; font-size: 17px; line-height: 1.75; font-weight: 500; }
+
+.video { border-radius: 32px; overflow: hidden; aspect-ratio: 16 / 9; }
+.video iframe { width: 100%; height: 100%; border: 0; display: block; }
+.video.placeholder { background: #F1F1F1; aspect-ratio: 16 / 7; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 17px; text-align: center; padding: 20px; }
+
+@media (max-width: 960px) {
+  .page-hero.even { grid-template-columns: 1fr; gap: 28px; }
+  .program { grid-template-columns: 1fr; }
+  .program-side { padding: 28px 24px; }
+  .program-side h2 { font-size: 26px; }
+  .program-text { padding: 24px; }
+  .video.placeholder { aspect-ratio: 16 / 9; }
+}
+
+/* ---------- Enrollment page ---------- */
+.pill-row { display: flex; gap: 12px; flex-wrap: wrap; }
+.pill-lg { padding: 12px 22px; border-radius: 999px; font-weight: 700; font-size: 17px; }
+.bg-blue { background: var(--blue-pale); }
+.pills .pill.bg-blue, .pills .pill.bg-green { background: var(--blue-pale); }
+.pills .pill.bg-green { background: var(--green-pale); }
+.pills { flex-direction: row; }
+
+.class-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; padding-top: 40px; }
+.class-link { border-radius: 32px; padding: 44px; display: flex; justify-content: space-between; align-items: center; gap: 20px; transition: transform .15s; }
+.class-link:hover { transform: translateY(-3px); }
+.class-link .kicker { margin-bottom: 10px; }
+.class-title { font-weight: 800; font-size: 34px; line-height: 1.1; letter-spacing: -0.02em; }
+.arrow { flex: none; width: 60px; height: 60px; border-radius: 50%; background: var(--white); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 28px; }
+.arrow.sm { width: 44px; height: 44px; font-size: 22px; }
+
+.info-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; padding-top: 20px; }
+.info-grid .card { padding: 36px; gap: 14px; border-radius: 28px; }
+.info-grid .card p { line-height: 1.7; margin: 0; }
+.info-grid .dot { width: 40px; height: 40px; flex: none; }
+.card-top { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.bw-logo { height: 36px; width: auto; display: block; }
+.btn-outline { align-self: flex-start; border: 2px solid var(--ink); padding: 12px 24px; border-radius: 999px; font-weight: 700; margin-top: 6px; }
+.btn-outline:hover { background: var(--yellow-pale); }
+
+.doc-links { display: flex; gap: 20px; flex-wrap: wrap; padding-top: 20px; }
+.doc-link { flex: 1; min-width: 260px; border-radius: 999px; padding: 22px 32px; display: flex; justify-content: space-between; align-items: center; gap: 16px; font-weight: 800; font-size: 20px; letter-spacing: -0.01em; }
+
+@media (max-width: 960px) {
+  .class-links, .info-grid { grid-template-columns: 1fr; }
+  .class-link { padding: 28px; }
+  .class-title { font-size: 26px; }
+  .arrow { width: 48px; height: 48px; font-size: 22px; }
+  .info-grid .card { padding: 28px; }
+  .pill-lg { font-size: 15px; padding: 10px 18px; }
+}
+
+/* ---------- Pricing page ---------- */
+.price-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; align-items: start; }
+.price-card { border-radius: 32px; padding: 36px 36px 24px; display: flex; flex-direction: column; }
+.price-title { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
+.price-title .dot { width: 24px; height: 24px; flex: none; }
+.price-title h3 { margin: 0; font-weight: 800; font-size: 28px; letter-spacing: -0.02em; }
+.price-note { font-size: 15px; line-height: 1.6; font-weight: 500; margin-bottom: 18px; }
+.price-row { display: flex; justify-content: space-between; align-items: baseline; gap: 20px; padding: 15px 0; border-top: 1px solid rgba(26, 26, 26, 0.15); }
+.price-row .plabel { font-weight: 700; font-size: 17px; }
+.price-row .sub { font-size: 14px; margin-top: 3px; font-weight: 500; }
+.price-row .pprice { font-weight: 800; font-size: 19px; text-align: right; }
+.price-foot { margin: 12px 0 8px; font-size: 14px; font-weight: 700; border-top: 1px solid rgba(26, 26, 26, 0.15); padding-top: 14px; }
+
+@media (max-width: 960px) {
+  .price-grid { grid-template-columns: 1fr; }
+  .price-card { padding: 28px 24px 16px; }
+  .price-title h3 { font-size: 24px; }
+  .price-row { gap: 12px; }
+  .price-row .plabel { font-size: 16px; }
+  .price-row .pprice { font-size: 17px; }
+}
+
+.page-hero.single .pill-lg { display: inline-block; }
+.price-row .pprice { white-space: nowrap; }
+@media (max-width: 960px) {
+  .page-hero.single .pill-lg { border-radius: 20px; }
+  .price-row .pprice { font-size: 16px; }
+  .price-row .plabel { font-size: 15px; }
+}
+
+/* ---------- Learn More page ---------- */
+.contact-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 24px; align-items: start; padding-top: 44px; }
+.form-card { background: var(--white); border: 1px solid var(--line); border-radius: 32px; padding: 40px; display: flex; flex-direction: column; gap: 20px; }
+.form-card label { display: flex; flex-direction: column; gap: 8px; font-weight: 700; font-size: 15px; }
+.form-card input[type="text"], .form-card input[type="email"], .form-card textarea {
+  width: 100%; padding: 14px 16px; border: 1.5px solid #CFCFCF; border-radius: 16px;
+  font: 500 16px 'Plus Jakarta Sans', sans-serif; color: var(--ink); background: var(--white);
+}
+.form-card input:focus, .form-card textarea:focus { outline: 3px solid var(--blue); border-color: var(--ink); }
+.form-card textarea { height: 150px; resize: vertical; }
+.form-card .check { font-weight: 500; display: flex; gap: 10px; align-items: center; margin-top: 4px; }
+.form-card button { align-self: flex-start; border: 0; cursor: pointer; font: 700 17px 'Plus Jakarta Sans', sans-serif; margin-top: 6px; }
+
+.side-col { display: flex; flex-direction: column; gap: 20px; }
+.info-card { background: var(--cream); border-radius: 32px; padding: 36px 40px 20px; }
+.info-card h2 { font-weight: 800; font-size: 28px; letter-spacing: -0.02em; margin: 0 0 14px; }
+.info-row { display: flex; gap: 16px; align-items: flex-start; padding: 18px 0; border-top: 1px solid var(--line); }
+.info-row .dot { width: 22px; height: 22px; flex: none; margin-top: 3px; }
+.info-row .il { font-weight: 800; font-size: 17px; margin-bottom: 4px; }
+.info-row .iv { font-size: 17px; line-height: 1.6; font-weight: 500; overflow-wrap: anywhere; }
+.info-row .iv a:hover { text-decoration: underline; }
+.map { border-radius: 32px; overflow: hidden; min-height: 280px; background: #F1F1F1; }
+.map iframe { display: block; width: 100%; height: 320px; border: 0; }
+
+@media (max-width: 960px) {
+  .contact-grid { grid-template-columns: 1fr; padding-top: 28px; }
+  .form-card { padding: 28px 24px; }
+  .info-card { padding: 28px 24px 12px; }
 }
