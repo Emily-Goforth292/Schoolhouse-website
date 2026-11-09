@@ -531,3 +531,7 @@ h1, h2, h3, p { margin-top: 0; }
   .form-card { padding: 28px 24px; }
   .info-card { padding: 28px 24px 12px; }
 }
+
+.map { position: relative; }
+.map-link { position: absolute; left: 16px; bottom: 16px; background: var(--white); padding: 10px 18px; border-radius: 999px; font-weight: 700; font-size: 15px; box-shadow: 0 2px 8px rgba(0,0,0,.15); }
+.map-link:hover { background: var(--yellow-pale); }
