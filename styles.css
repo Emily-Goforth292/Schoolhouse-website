@@ -535,3 +535,9 @@ h1, h2, h3, p { margin-top: 0; }
 .map { position: relative; }
 .map-link { position: absolute; left: 16px; bottom: 16px; background: var(--white); padding: 10px 18px; border-radius: 999px; font-weight: 700; font-size: 15px; box-shadow: 0 2px 8px rgba(0,0,0,.15); }
 .map-link:hover { background: var(--yellow-pale); }
+
+/* Enrollment buttons before applications open */
+.class-link.is-closed { cursor: default; }
+.class-link.is-closed:hover { transform: none; }
+.closed-tag { flex: none; background: var(--white); padding: 12px 20px; border-radius: 999px; font-weight: 700; font-size: 16px; white-space: nowrap; }
+@media (max-width: 960px) { .closed-tag { padding: 10px 16px; font-size: 15px; } }
